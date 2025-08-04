@@ -1,0 +1,113 @@
+{
+  "Version": "1.0",
+  "HomeAssistant": {
+    "Url": "ws://YOUR_IP:8123/api/websocket",
+    "Token": "YOUR_TOKEN"
+  },
+  "Scene": {
+    "Name": "Atelier",
+    "Description": "A collection of dashboards showcasing various materials and gauges in old-school atmosphere."
+  },
+  "Dashboards": [
+    {
+      "Identifier": "s-square",
+      "Name": "IT Canvas",
+      "Description": "Show various CPU, memory, and temperature metrics from the Home Assistant and Unifi system.",
+      "Theme": {
+        "AccentColor": "#d4001a",
+        "BoardMaterial": "Aluminium",
+        "BoardColor": "#ccddee"
+      },
+      "Gauges": [
+        {
+          "FrameModel": "Frame-A-100mm",
+          "FrameMaterial": "Aluminium",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-cpu-util_full_0_100_30_330.png",
+          "Value": "sensor.home_assistant_core_cpu_percent",
+          "TextUp": "HA CPU",
+          "X": 150,
+          "Y": 100,
+          "Recessed": 10
+        },
+        {
+          "FrameModel": "Frame-A-100mm",
+          "FrameMaterial": "Aluminium",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-cpu-util_full_0_100_30_330.png",
+          "Value": "sensor.unifi_cpu_utilization_2",
+          "TextUp": "Unifi CPU",
+          "X": 0,
+          "Y": 100,
+          "Recessed": 20
+        },
+        {
+          "FrameModel": "Frame-A-100mm",
+          "FrameMaterial": "Aluminium",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-cpu-util_full_0_100_30_330.png",
+          "Value": "sensor.synology_cpu_utilization_total",
+          "TextUp": "Synology CPU",
+          "X": -150,
+          "Y": 100,
+          "Recessed": 20
+        },
+        {
+          "FrameModel": "Frame-A-50mm",
+          "FrameMaterial": "Chrome",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-mem-util_full_0_100_30_330.png",
+          "Value": "sensor.home_assistant_core_memory_percent",
+          "TextUp": "HA Mem",
+          "X": 150,
+          "Y": 0,
+          "Recessed": 0
+        },
+        {
+          "FrameModel": "Frame-A-50mm",
+          "FrameMaterial": "Chrome",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-mem-util_full_0_100_30_330.png",
+          "Value": "sensor.unifi_memory_utilization_2",
+          "TextUp": "Unifi Mem",
+          "X": 0,
+          "Y": 0,
+          "Recessed": 10
+        },
+        {
+          "FrameModel": "Frame-A-50mm",
+          "FrameMaterial": "Chrome",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-mem-util_full_0_100_30_330.png",
+          "Value": "sensor.synology_memory_usage_real",
+          "TextUp": "Synology Mem",
+          "X": -150,
+          "Y": 0,
+          "Recessed": 10
+        },
+        {
+          "FrameModel": "Frame-A-50mm",
+          "FrameMaterial": "Chrome",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-system-temp-small_full_0_100_30_330.png",
+          "Value": "sensor.unifi_cpu_temperature",
+          "TextUp": "Unifi Temp",
+          "X": 0,
+          "Y": -60,
+          "Recessed": 10
+        },
+        {
+          "FrameModel": "Frame-A-50mm",
+          "FrameMaterial": "Chrome",
+          "FrameColor": "#ffffff",
+          "Face": "sepiana-system-temp-small_full_0_100_30_330.png",
+          "Value": "sensor.synology_temperature",
+          "TextUp": "Synology Temp",
+          "X": -150,
+          "Y": -60,
+          "Recessed": 10
+        }
+      ]
+    }
+  ]
+}
